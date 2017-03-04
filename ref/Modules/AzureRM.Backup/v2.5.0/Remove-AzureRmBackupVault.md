@@ -1,0 +1,135 @@
+---
+external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+ms.assetid: 698DCD00-13C0-4C36-A74B-35215D608339
+online version: 
+schema: 2.0.0
+updated_at: 1/20/2017 9:17 PM
+ms.date: 1/20/2017
+content_git_url: https://github.com/Azure/azure-docs-powershell/blob/master/azureps-cmdlets-docs/ResourceManager/AzureRM.Backup/v2.5.0/Remove-AzureRmBackupVault.md
+original_content_git_url: https://github.com/Azure/azure-docs-powershell/blob/master/azureps-cmdlets-docs/ResourceManager/AzureRM.Backup/v2.5.0/Remove-AzureRmBackupVault.md
+gitcommit: https://github.com/Azure/azure-docs-powershell/blob/cb06bb906911a2a2e1f57adbafe0c0c97a0b205b/azureps-cmdlets-docs/ResourceManager/AzureRM.Backup/v2.5.0/Remove-AzureRmBackupVault.md
+ms.topic: reference
+ms.prod: powershell
+ms.technology: Azure PowerShell
+author: erickson-doug
+ms.author: PowerShellHelpPub
+keywords: powershell, cmdlet
+manager: erickson-doug
+open_to_public_contributors: False
+ms.service: azure-powershell
+---
+
+# Remove-AzureRmBackupVault
+
+## SYNOPSIS
+Deletes a Backup vault.
+
+## SYNTAX
+
+```
+Remove-AzureRmBackupVault [-Force] [-Vault] <AzureRMBackupVault> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Remove-AzureRmBackupVault** cmdlet deletes an Azure Backup vault.
+
+Before you can delete a Backup vault, it must be empty.
+Use the **Remove-AzureRmBackupContainer** cmdlet to remove infrastructure as a service (IaaS) virtual machine backup data from the vault.
+Use the **Delete-RegisteredServer** cmdlet to remove other registered servers and backup data.
+
+## EXAMPLES
+
+### Example 1: Delete an Azure Backup vault
+```
+PS C:\>Get-AzureRmBackupVault -Name "Vault03" | Remove-AzureRmBackupVault
+```
+
+This command gets the Azure Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.
+The command passes that vault to the current cmdlet by using the pipeline operator.
+The current cmdlet removes the vault.
+
+## PARAMETERS
+
+### -Force
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Vault
+Specifies a Backup vault that this cmdlet removes.
+To obtain an **AzureRmBackupVault**, use the Get-AzureRmBackupVault cmdlet.
+
+```yaml
+Type: AzureRMBackupVault
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### AzureRMBackupVault
+
+## OUTPUTS
+
+### None
+
+## NOTES
+* None
+
+## RELATED LINKS
+
+[Get-AzureRmBackupVault](xref:ResourceManager/AzureRM.Backup/v2.5.0/Get-AzureRmBackupVault.md)
+
+[New-AzureRmBackupVault](xref:ResourceManager/AzureRM.Backup/v2.5.0/New-AzureRmBackupVault.md)
+
+[Set-AzureRmBackupVault](xref:ResourceManager/AzureRM.Backup/v2.5.0/Set-AzureRmBackupVault.md)
+
+

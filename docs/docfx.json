@@ -1,36 +1,42 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "azps-concepts"
-  }
+    "build": {
+        "content": [{
+            "files": [
+                "**/*.md"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**",
+                "README.md",
+                "LICENSE",
+                "LICENSE-CODE"
+            ]
+        }],
+        "resource": [{
+            "files": [
+                "**/*.png",
+                "**/*.jpg"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**"
+            ]
+        }],
+        "overwrite": [],
+        "externalReference": [],
+        "globalMetadata": {
+            "breadcrumb_path": "/powershell/azureps/breadcrumb/toc.json",
+            "keywords": "azure, powershell, command line",
+            "brand": "azure",
+            "author": "sdwheeler",
+            "ms.author": "sewhee",
+            "manager": "carmonm",
+            "ms.topic": "reference",
+            "ms.devlang": "powershell",
+            "ms.date": "03/03/2017"
+        },
+        "fileMetadata": {},
+        "template": [],
+        "dest": "azps-concepts"
+    }
 }
