@@ -1,5 +1,5 @@
 ---
-title: Getting started with Azure PowerShell | Microsoft Docs
+title: Get started with Azure PowerShell | Microsoft Docs
 description: This is a running history of changes made to Azure PowerShell in each release.
 services: azure
 author: sdwheeler
