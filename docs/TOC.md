@@ -3,7 +3,5 @@
 ## [Get started](get-started-azureps.md)
 ## [Log in](authenticate-azureps.md)
 ### [Create a service principal](create-azure-service-principal-azureps.md)
-## [Output formats](format-output-azureps.md)
-## [Query](query-azureps.md)
 ## [Subscriptions](manage-subscriptions-azureps.md)
 ## [Release notes](release-notes-azureps.md)
