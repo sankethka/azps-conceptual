@@ -19,27 +19,40 @@ You can use the cmdlets to create, test, deploy, and manage solutions and servic
 the Azure platform. In most cases, the cmdlets can be used for the same tasks as the Azure Portal,
 such as creating and configuring cloud services, virtual machines, virtual networks, and web apps.
 
-## Step 1: Install Azure PowerShell
+## Step 1: Install PowerShellGet
 
 Installing Azure PowerShell from the [PowerShell Gallery](https://www.powershellgallery.com/) is
 the preferred method of installation. For alternative methods of installation, see the
 [Other installation methods](#other-installation-methods) section of this document: .
 
 Installing items from the PowerShell Gallery requires the PowerShellGet module. Make sure you have
-the appropriate version of PowerShellGet for your operating system.
+the appropriate version of PowerShellGet and other system requirements.
 
-|OS Version|Download instructions|
+|OS Version|Install instructions|
 |---|---|
 |Windows 10 and Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
-|Windows 7, Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2013 R2|[Download the latest WMF package](http://go.microsoft.com/fwlink/?LinkId=398175)|
-|Previous versions of Windows running PowerShell 3 or PowerShell 4|[Download the PackageManagement PowerShell Modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2 SP1, Windows Server 2012, and Windows Server 2012 R2|[Upgrade PowerShell by installing the WMF 5.0](http://go.microsoft.com/fwlink/?LinkId=398175)|
+|Windows running PowerShell 3 or PowerShell 4|[Download and install the PackageManagement module](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
-Installing Azure PowerShell from the PowerShell Gallery requires elevated priviledges. Run the following command from an elevated PowerShell session:
+Other requirements
+
+- PowerShell 3.0 or newer
+- .NET Framework 4.5 or above
+- The [NuGet provider](http://www.nuget.org) to work with the PowerShell Gallery
+
+## Step 2: Install Azure PowerShell
+
+Installing Azure PowerShell from the PowerShell Gallery requires elevated privileges. Run the
+following command from an elevated PowerShell session:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module AzureRM
 ```
+
+> [!NOTE]
+> If you have a version older than 2.8.5.201 of NuGet, you will be prompted to download and install
+the latest version of NuGet.
 
 The AzureRM module is a rollup module for the Azure Resource Manager cmdlets. The definition of the
 AzureRM module includes a list all of the dependent AzureRM service modules and their versions.
@@ -47,13 +60,14 @@ This list assures that the proper version of each module is installed for the sp
 the rollup module. When you install the AzureRM module, any Azure Resource Manager module that has
 not previously been installed will be downloaded and installed from the PowerShell Gallery.
 
-Once the module is installed, you need to load the module into your PowerShell session. Modules are loaded using the `Import-Module` cmdlet, as follows:
+Once the module is installed, you need to load the module into your PowerShell session. Modules are
+loaded using the `Import-Module` cmdlet, as follows:
 
 ```powershell
 Import-Module AzureRM
 ```
 
-## Step 2: Connect to an Azure account
+## Step 3: Connect to an Azure account
 
 You can run the cmdlets from the standard Windows PowerShell console, or from PowerShell Integrated
 Scripting Environment (ISE). The cmdlets need your subscription information so they can manage your
@@ -67,64 +81,14 @@ Sign on interactively:
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
 
---OR--
+Now you are signed into Azure. You can use Azure PowerShell to create and manage resources in
+resources in your account. For more information about using Azure PowerShell, see the following
+articles:
 
-Sign into your work or school account:
-
-```powershell
-$cred = Get-Credential
-Login-AzureRmAccount -Credential $cred
-```
-
-> [!NOTE]
-> This non-interactive log in method only works with a work or school account. A work or
-> school account is a user that is managed by your work or school, and defined in the Azure Active
-> Directory instance for your work or school.
->
-> For more information on signing up for Microsoft Azure with a work or school account, see [Sign up
-> for Microsoft Azure as an Organization](/azure/active-directory/sign-up-organization.md).
->
-> For more information about authentication and subscription management in Azure, see
-> [Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure.md).
-
-## Step 3: Run Azure PowerShell cmdlets
-
-Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
-manager the resources in your subscription.
-
-### Commands to help you get started
-
-```powershell
-# Load the Azure PowerShell module
-Import-Module AzureRM
-
-# To log in to Azure Resource Manager
-Login-AzureRmAccount
-
-# You can also use a specific Tenant if you would like a faster log in experience
-# Login-AzureRmAccount -TenantId xxxx
-
-# To view all subscriptions for your account
-Get-AzureRmSubscription
-
-# To select a default subscription for your current session.
-# This is useful when you have multiple subscriptions.
-Get-AzureRmSubscription -SubscriptionName "your sub" | Select-AzureRmSubscription
-
-# View your current Azure PowerShell session context
-# This session state is only applicable to the current session and will not affect other sessions
-Get-AzureRmContext
-
-# To select the default storage context for your current session
-Set-AzureRmCurrentStorageAccount -ResourceGroupName "your resource group" -StorageAccountName "your storage account name"
-
-# View your current Azure PowerShell session context
-# Note: the CurrentStorageAccount is now set in your session context
-Get-AzureRmContext
-
-# To list all of the blobs in all of your containers in all of your accounts
-Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
-```
+* [Sign on with Azure PowerShell](authenticate-azureps.md)
+* [Get started with Azure PowerShell](get-started-azureps.md)
+* [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
+* [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
 
 ## <a id="Help"></a>Getting help
 
@@ -134,7 +98,7 @@ These resources provide help for specific cmdlets:
   [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * For help from the community, try these popular forums:
     + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-    + [Stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+    + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
 
 ## Other installation methods
 
@@ -162,7 +126,8 @@ Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and star
 > `$env:ProgramFiles\WindowsPowerShell\Modules` folder, and try the installation again.
 
 Once the installation completes, your `$env:PSModulePath` setting should include the directories
-containing the Azure PowerShell cmdlets.
+containing the Azure PowerShell cmdlets. The following command can be used to verify that the Azure
+PowerShell is installed properly.
 
 ```powershell
 # To make sure the Azure PowerShell module is available after you install
@@ -206,8 +171,8 @@ folders.
 
 ### Installing module versions side-by-side
 
-You should always install the latest available version of Azure PowerShell. But if you have scripts written against an earlier
-version, you should check for breaking changes in the newer version.
+You should always install the latest available version of Azure PowerShell. But if you have scripts
+written against an earlier version, you should check for breaking changes in the newer version.
 
 Version 2.1.0 (and version 1.2.6 for AzureStack) are the first module versions designed to be
 installed and used side-by-side. You must use the PowerShellGet method of installation to install
@@ -238,7 +203,9 @@ logged in.
 
 PowerShellGet has the ability to update an installed module when a new version has been released to
 the PowerShell Gallery. Using the `Update-Module` cmdlet, you can download and install the latest
-version. By default, the new version will be installed side-by-side with any other versions that have been installed. If you want to replace the current version with the new version you must use the `-Force` parameter. For example:
+version. By default, the new version will be installed side-by-side with any other versions that
+have been installed. If you want to replace the current version with the new version you must use
+the `-Force` parameter. For example:
 
 ```powershell
 Update-Module -Name AzureRM -Force
