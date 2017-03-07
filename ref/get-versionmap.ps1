@@ -1,10 +1,27 @@
-$x = Find-Module azurerm -all
-foreach ($m in $x) {
-  '- name: azurepowershell-' + $m.version
-  '  dependencies:'
-  $m.Dependencies | %{
-    $d = new-object -type psobject -prop ([ordered]@{name=$_.name;version=$_.RequiredVersion})
-    '    - module: ' +  $d.name
-    '      version: v' + $d.version
+$map = @{}
+
+$allversions = Find-Module azurerm -all
+$map.Add('resourcemanager',@())
+foreach ($module in $allversions) {
+  $map.resourcemanager += ([ordered]@{
+    'name'=('azurepowershell-' + $module.version)
+    'dependencies'=@()
+  })
+  $module.Dependencies | %{
+    $map.resourcemanager[-1].dependencies += ([ordered]@{module=$_.name;version=$_.RequiredVersion})
   }
 }
+
+$allversions = Find-Module azure -all
+$map.Add('servicemanagement',@())
+foreach ($module in $allversions) {
+  $map.servicemanagement += ([ordered]@{
+    'name'=('azurepowershell-' + $module.version)
+    'dependencies'=@()
+  })
+  $module.Dependencies | %{
+    $map.servicemanagement[-1].dependencies += ([ordered]@{module=$_.name;version=$_.RequiredVersion})
+  }
+}
+
+$map
