@@ -1,3 +1,19 @@
+---
+title: Azure PowerShell Change Log | Microsoft Docs
+description: This is a running history of changes made to Azure PowerShell in each release.
+services: azure
+author: sdwheeler
+manager: carmonm
+ms.assetid: e2dec06a-4179-49e3-b6b1-b0f278956d11
+ms.service:
+ms.product: azure
+ms.devlang: powershell
+ms.topic: reference
+ms.workload:
+ms.date: 03/06/2017
+ms.author: sewhee
+---
+
 # Change Log
 
 ## 2017.02.22 - Version 3.6.0
