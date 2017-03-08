@@ -171,12 +171,14 @@ folders.
 
 ## Installing module versions side-by-side
 
-You should always install the latest available version of Azure PowerShell. But if you have scripts
-written using an earlier version, you should check for breaking changes in the newer version.
-
 Version 2.1.0 (and version 1.2.6 for AzureStack) are the first module versions designed to be
-installed and used side-by-side. You must use the PowerShellGet method of installation to install
-multiple versions.
+installed and used side-by-side. You should always install the latest available version of Azure
+PowerShell. But if you have scripts written using an earlier version, you should check for breaking
+changes in the newer version.
+
+If you are using Azure Stack you will need to install Azure PowerShell v1.2.8. For complete
+instructions on using Azure PowerShell with Azure Stack see [Install PowerShell for Azure
+Stack](/azure/azure-stack/azure-stack-powershell-install).
 
 The PowerShellGet method of installation is the only method that supports the installation of
 multiple versions. The following commands illustrate how to install multiple versions of Azure
@@ -184,14 +186,16 @@ PowerShell:
 
 ```powershell
 Install-Module -Name AzureRM -RequiredVersion 3.6.0
-Install-Module -Name AzureRM -RequiredVersion 1.2.6
+Install-Module -Name AzureRM -RequiredVersion 1.2.8
+Install-Module -Name AzureStack
 ```
 
 Only one version of the module can be loaded in a PowerShell session. You must open a new
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 3.6.0**
+Import-Module AzureRM -RequiredVersion 1.2.8
+Import-Module AzureStack
 ```
 
 > [!NOTE]
