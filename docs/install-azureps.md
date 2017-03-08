@@ -1,5 +1,5 @@
 ---
-title: Get started with Azure PowerShell | Microsoft Docs
+title: Install and configure Azure PowerShell | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use.
 services: azure
 author: sdwheeler

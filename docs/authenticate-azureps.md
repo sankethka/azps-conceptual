@@ -84,6 +84,7 @@ from either your scripts or applications that manipulate resources.
 For more information about authentication and subscription management in Azure, see
 [Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure.md).
 
+Azure PowerShell cmdlets for role management
 
 * [Get-AzureRmRoleAssignment](../ref/Get-AzureRmRoleAssignment.md)
 * [Get-AzureRmRoleDefinition](../ref/Get-AzureRmRoleDefinition.md)

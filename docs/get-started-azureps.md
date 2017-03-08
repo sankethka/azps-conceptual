@@ -74,7 +74,7 @@ MYWESTUSRG          MyWin2016VM   westus Standard_DS1_v2 Windows   mywin2016vm88
 Get-AzureRmVirtualNetwork
 ```
 
-'''
+```
 Name                   : MyWestUSRG-vnet
 ResourceGroupName      : MyWestUSRG
 Location               : westus
@@ -108,7 +108,7 @@ Subnets                : [
                            }
                          ]
 VirtualNetworkPeerings : []
-'''
+```
 
 ### List Azure locations
 
