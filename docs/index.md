@@ -1,3 +1,3 @@
 ---
-redirect_url: /azps-concepts/overview.md
+redirect_url: /azps-concepts/overview
 ---
