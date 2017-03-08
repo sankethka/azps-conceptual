@@ -28,15 +28,11 @@ for more details.
 ## What is a 'service principal'?
 
 An Azure service principal is a security identity used by user-created apps, services, and
-automation tools to access specific Azure resources. Think of it as a 'user identity' (login and
+automation tools to access specific Azure resources. Think of it as a 'user identity' (username and
 password or certificate) with a specific role, and tightly controlled permissions to access your
 resources. It only needs to be able to do specific things, unlike a general user identity. It
 improves security if you only grant it the minimum permissions level needed to perform its
 management tasks.
-
-Right now, Azure PowerShell only supports the creation of password-based authentication
-credentials. In this topic, we cover creating a service principal with a specific password, and
-optionally assigning specific roles to it.
 
 ## Verify your own permission level
 
@@ -54,6 +50,8 @@ of the following ways to identify your deployed app:
 
   * The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
   * the Application ID, the unique GUID associated with your deployed app, service, or object
+
+### Get information about your application
 
 The `Get-AzureRmADApplication` cmdlet can be used to discover information about your application.
 
@@ -73,6 +71,8 @@ AppPermissions          :
 ReplyUrls               : {}
 ```
 
+### Create a service principal for your application
+
 The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
 
 ```powershell
@@ -86,6 +86,7 @@ DisplayName                    Type                           ObjectId
 MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
+### Get information about the service principal
 
 ```powershell
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
@@ -100,7 +101,9 @@ Id                    : 698138e7-d7b6-4738-a866-b4e3081a69e4
 Type                  : ServicePrincipal
 ```
 
-You can now log in as the new service principal for your app using the *appId* and *password* you
+### Sign in using the service principal
+
+You can now sign in as the new service principal for your app using the *appId* and *password* you
 provided. You need to supply the Tenant Id for your account. Your Tenant Id is displayed when you
 sign into Azure with your personal credentials.
 
@@ -182,7 +185,7 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-## Change the credentials for a security principal
+## Change the credentials of the security principal
 
 It's a good security practice to review the permissions and update the password regularly. You may
 also want to manage and modify the security credentials as your app changes. For example, we can

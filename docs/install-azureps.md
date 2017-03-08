@@ -169,16 +169,18 @@ versions of Azure modules the installer will automatically remove them. The MSI 
 modules in `$env:ProgramFiles\WindowsPowerShell\Modules` but does not create version specific
 folders.
 
-### Installing module versions side-by-side
+## Installing module versions side-by-side
 
 You should always install the latest available version of Azure PowerShell. But if you have scripts
-written against an earlier version, you should check for breaking changes in the newer version.
+written using an earlier version, you should check for breaking changes in the newer version.
 
 Version 2.1.0 (and version 1.2.6 for AzureStack) are the first module versions designed to be
 installed and used side-by-side. You must use the PowerShellGet method of installation to install
 multiple versions.
 
-The following commands illustrate how to install multiple versions of Azure PowerShell:
+The PowerShellGet method of installation is the only method that supports the installation of
+multiple versions. The following commands illustrate how to install multiple versions of Azure
+PowerShell:
 
 ```powershell
 Install-Module -Name AzureRM -RequiredVersion 3.6.0
