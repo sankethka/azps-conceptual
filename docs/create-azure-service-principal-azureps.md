@@ -20,7 +20,6 @@ If you plan to manage your app or service with Azure PowerShell, you should run 
 Active Directory (AAD) service principal, rather than your own credentials. This topic steps you
 through creating a security principal with Azure PowerShell.
 
-
 > [!NOTE] > You can also create a service principal through the Azure portal. Read
 [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)
 for more details.
@@ -48,8 +47,8 @@ The easiest way to check whether your account has adequate permissions is throug
 Once you are signed into your Azure account you can create the service principal. You must have one
 of the following ways to identify your deployed app:
 
-  * The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
-  * the Application ID, the unique GUID associated with your deployed app, service, or object
+* The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
+* the Application ID, the unique GUID associated with your deployed app, service, or object
 
 ### Get information about your application
 
@@ -190,7 +189,6 @@ ObjectType         : ServicePrincipal
 It's a good security practice to review the permissions and update the password regularly. You may
 also want to manage and modify the security credentials as your app changes. For example, we can
 change the password of the service principal by creating a new password and removing the old one.
-
 
 ### Add a new password for the service principal
 
