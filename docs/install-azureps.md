@@ -23,7 +23,7 @@ such as creating and configuring cloud services, virtual machines, virtual netwo
 
 Installing Azure PowerShell from the [PowerShell Gallery](https://www.powershellgallery.com/) is
 the preferred method of installation. For alternative methods of installation, see the
-[Other installation methods](#other-installation-methods) section of this document: .
+[Other installation methods](#other-installation-methods) section of this document.
 
 Installing items from the PowerShell Gallery requires the PowerShellGet module. Make sure you have
 the appropriate version of PowerShellGet and other system requirements.
