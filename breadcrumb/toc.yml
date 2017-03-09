@@ -1,0 +1,29 @@
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
+  items:
+  - name: Managing Azure with PowerShell
+    tocHref: /azps-conceptual/
+    topicHref: /azps-conceptual/index
+    items:
+    - name: Azure Resource Manager
+      tocHref: /azps-conceptual/resourcemanager/
+      topicHref: /azps-conceptual/resourcemanager/index
+    - name: Azure Service Management
+      tocHref: /azps-conceptual/servicemanagement/
+      topicHref: /azps-conceptual/servicemanagement/index
+    - name: Azure Storage
+      tocHref: /azps-conceptual/storage/
+      topicHref: /azps-conceptual/storage/index
+    - name: Azure Active Directory
+      tocHref: /azps-conceptual/azuread/
+      topicHref: /azps-conceptual/azuread/index
+    - name: Azure Infomration Protection
+      tocHref: /azps-conceptual/azuredrm/
+      topicHref: /azps-conceptual/azuredrm/index
+    - name: Azure Service Fabric
+      tocHref: /azps-conceptual/servicefabric/
+      topicHref: /azps-conceptual/servicefabric/index
+    - name: Azure ElasticDB
+      tocHref: /azps-conceptual/elasticdb/
+      topicHref: /azps-conceptual/elasticdb/index
