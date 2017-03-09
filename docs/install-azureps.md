@@ -171,10 +171,10 @@ folders.
 
 ## Installing module versions side-by-side
 
-Version 2.1.0 (and version 1.2.6 for AzureStack) are the first module versions designed to be
-installed and used side-by-side. You should always install the latest available version of Azure
-PowerShell. But if you have scripts written using an earlier version, you should check for breaking
-changes in the newer version.
+Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used
+side-by-side. You should always install the latest available version of Azure PowerShell. But if
+you have scripts written using an earlier version, you should check for breaking changes in the
+newer version.
 
 If you are using Azure Stack you will need to install Azure PowerShell v1.2.8. For complete
 instructions on using Azure PowerShell with Azure Stack see [Install PowerShell for Azure

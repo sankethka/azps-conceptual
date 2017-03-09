@@ -4,7 +4,7 @@ $allversions = Find-Module azurerm -all
 $map.Add('resourcemanager',@())
 foreach ($module in $allversions) {
   $map.resourcemanager += ([ordered]@{
-    'name'=('azurepowershell-' + $module.version)
+    'name'=('azrmps-' + $module.version)
     'dependencies'=@()
   })
   $module.Dependencies | %{
@@ -16,7 +16,7 @@ $allversions = Find-Module azure -all
 $map.Add('servicemanagement',@())
 foreach ($module in $allversions) {
   $map.servicemanagement += ([ordered]@{
-    'name'=('azurepowershell-' + $module.version)
+    'name'=('azsmps-' + $module.version)
     'dependencies'=@()
   })
   $module.Dependencies | %{
