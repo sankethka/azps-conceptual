@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/09/2017
 ms.author: sewhee
 ---
 
