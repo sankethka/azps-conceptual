@@ -1,0 +1,7 @@
+# [Overview](overview.md)
+## [Install](install-azureps.md)
+## [Get started](get-started-azureps.md)
+## [Log in](authenticate-azureps.md)
+### [Create a service principal](create-azure-service-principal-azureps.md)
+## [Subscriptions](manage-subscriptions-azureps.md)
+## [Release notes](release-notes-azureps.md)
