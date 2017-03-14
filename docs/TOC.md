@@ -1,14 +1,14 @@
-# [Overview](index.md)
+# [Overview](index)
 
 ## Azure PowerShell
 ### [Azure Resource Manager](/azps-concepts/resourcemanager/)
-#### [Overview](/azps-concepts/resourcemanager/overview.md)
-##### [Install](/azps-concepts/resourcemanager/install-azureps.md)
-##### [Get started](/azps-concepts/resourcemanager/get-started-azureps.md)
-##### [Log in](/azps-concepts/resourcemanager/authenticate-azureps.md)
-###### [Create a service principal](/azps-concepts/resourcemanager/create-azure-service-principal-azureps.md)
-##### [Subscriptions](/azps-concepts/resourcemanager/manage-subscriptions-azureps.md)
-##### [Release notes](/azps-concepts/resourcemanager/release-notes-azureps.md)
+#### [Overview](/azps-concepts/resourcemanager/overview)
+##### [Install](/azps-concepts/resourcemanager/install-azureps)
+##### [Get started](/azps-concepts/resourcemanager/get-started-azureps)
+##### [Log in](/azps-concepts/resourcemanager/authenticate-azureps)
+###### [Create a service principal](/azps-concepts/resourcemanager/create-azure-service-principal-azureps)
+##### [Subscriptions](/azps-concepts/resourcemanager/manage-subscriptions-azureps)
+##### [Release notes](/azps-concepts/resourcemanager/release-notes-azureps)
 
 ### [Azure Service Management](/azps-concepts/servicemanagement/)
 
