@@ -24,22 +24,16 @@ you time and resources.
 Azure PowerShell provides cmdlets most of the services and features of Azure. Azure PowerShell
 consists of the following modules:
 
-* [Azure Resource Manager](/azps-concepts/resourcemanager/)
+* [Azure Resource Manager](/azps-concepts/resourcemanager/overview.md)
 
-    Azure Resource Manager enables you to work with your Azure resources in your solution using the
-    Azure Resource Manager deployment model. You can deploy, update, or delete all the resources
-    for your solution in a single, coordinated operation.
+    Azure Resource Manager is the preferred deployment model. This module allows you to manage your
+    Azure resources using this model.
 
 * [Azure Service Management](/azps-concepts/servicemanagement/)
 
-    Azure Service Management helps you manage your applications, hosted services, and storage
-    accounts using the Service Management deployment model.
-
-* [Azure Storage](/azps-concepts/storage/)
-
-    Azure Storage is the cloud storage solution for modern applications that rely on durability,
-    availability, and scalability to meet your needs. Storage supports Blob storage, File storage,
-    Queue storage, and Table storage.
+    Azure Service Management is the classic deployment model. This module is used to manage older
+    resources that cannot be managed using the Azure Resource Manager model. Any new deployments
+    should be done using the Azure Resource Manger methods.
 
 ## Azure Active Directory (AzureAD) PowerShell
 
