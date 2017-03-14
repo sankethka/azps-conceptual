@@ -14,7 +14,8 @@
 ### [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
 ### [Web Apps](https://docs.microsoft.com/azure/app-service-web/app-service-powershell-samples)
 ### [SQL Databases](https://docs.microsoft.com/azure/sql-database/sql-database-powershell-samples)
-## [Azure Service Management](/azps-concepts/servicemanagement/)
+
+## [Azure Service Management](/azps-concepts/servicemanagement/overview)
 
 # Azure Active Directory (AzureAD) PowerShell
 ## [AzureAD (v2)](/azps-concepts/azuread/)

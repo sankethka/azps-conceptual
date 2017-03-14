@@ -2,13 +2,34 @@
   tocHref: /azure/
   topicHref: /azure/index
   items:
-  - name: Managing Azure with PowerShell
+  - name: Azure PowerShell
     tocHref: /azps-conceptual/
-    topicHref: /azps-conceptual/index
+    topicHref: /azps-conceptual/docs/index
     items:
     - name: Azure Resource Manager
       tocHref: /azps-conceptual/resourcemanager/
       topicHref: /azps-conceptual/resourcemanager/index
+      items:
+      - name: Install
+        tocHref: /azps-conceptual/resourcemanager/install-azureps
+        topicHref: /azps-conceptual/resourcemanager/install-azureps
+      - name: Get Started
+        tocHref: /azps-conceptual/resourcemanager/get-starated-azureps
+        topicHref: /azps-conceptual/resourcemanager/get-starated-azureps
+    - name: Sample scripts
+      items:
+      - name: Linux VMs
+        tocHref: /azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+        topicHref: /azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+      - name: Windows VMs
+        tocHref: /azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json
+        topicHref: /azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json
+      - name: Web Apps
+        tocHref: /azure/app-service-web/app-service-powershell-samples
+        topicHref: /azure/app-service-web/app-service-powershell-samples
+      - name: SQL Database
+        tocHref: /azure/sql-database/sql-database-powershell-samples
+        topicHref: /azure/sql-database/sql-database-powershell-samples
     - name: Azure Service Management
       tocHref: /azps-conceptual/servicemanagement/
       topicHref: /azps-conceptual/servicemanagement/index

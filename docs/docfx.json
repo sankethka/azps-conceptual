@@ -1,17 +1,26 @@
 {
     "build": {
         "content": [{
-            "files": [
-                "**/*.md"
-            ],
-            "exclude": [
-                "**/obj/**",
-                "**/includes/**",
-                "README.md",
-                "LICENSE",
-                "LICENSE-CODE"
-            ]
-        }],
+                "src": "docs",
+                "files": [
+                    "**/*.md"
+                ],
+                "exclude": [
+                    "**/obj/**",
+                    "**/includes/**",
+                    "README.md",
+                    "LICENSE",
+                    "LICENSE-CODE"
+                ]
+            },
+            {
+                "src": "breadcrumb",
+                "dest": "breadcrumb",
+                "files": [
+                    "**/*.yml"
+                ]
+            }
+        ],
         "resource": [{
             "files": [
                 "**/*.png",
