@@ -11,7 +11,6 @@
         "type_mapping": {
             "Conceptual": "Content",
             "ManagedReference": "Content",
-            "AzurePS": "Content",
             "RestApi": "Content"
         },
         "build_entry_point": "docs",
