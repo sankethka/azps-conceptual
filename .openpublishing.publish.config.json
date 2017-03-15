@@ -4,7 +4,7 @@
     "docsets_to_publish": [{
         "docset_name": "azps-concepts",
         "build_source_folder": "docs",
-        "build_output_subfolder": "powershell/azure",
+        "build_output_subfolder": "azps-concepts",
         "locale": "en-us",
         "version": 0,
         "open_to_public_contributors": true,
