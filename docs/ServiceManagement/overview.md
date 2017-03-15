@@ -1,5 +1,5 @@
 ---
-title: Overview of Azure PowerShell | Microsoft Docs
+title: Overview of the Azure PowerShell Service Management module | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 author: sdwheeler
 manager: carmonm
@@ -11,15 +11,9 @@ ms.author: sewhee
 ms.manager: carmonm
 ---
 
-# Overview of Azure PowerShell
+# Overview of the Azure PowerShell Service Management module
 
 Azure PowerShell cmdlets provide support for the following Azure services:
-
-* [Azure Resource Manager](/azps-concepts/ref/resourcemanager/)
-
-    Azure Resource Manager is the preferred deployment method for creating and managing Azure
-    resources. This module enables you to work with your Azure resources using the Azure Resource
-    Manager deployment model.
 
 * [Azure Service Management](/azps-concepts/ref/servicemanagement/)
 
